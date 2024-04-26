@@ -23,6 +23,29 @@
         <div class="container">
             <div class="location-input">
                 <h2>Please enter a city name:</h2>
+                <input class="city-input" type="text" id="userInput" placeholder="e.g., Stockholm, London, New York">
+                <button class="search-btn" onclick="updateForcast()">Search</button>
+                <div class="separator"></div>
+                <button class="location-btn" onclick="updateForcast()">Use Current Location</button>
+            </div>
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h3>_____________ ( ____________ )</h3>
+                    <h6>Temperature: __°C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                </div>
+            </div>
+            <div class="forecast-weather">
+                <h2 id="forecastHeading"> Your 5 day forecast for</h2>
+                <div class="details">
+                    <h3>_____________ ( ____________ )</h3>
+                    <h6>Temperature: __°C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                </div>
             </div>
         </div>
     </body>
