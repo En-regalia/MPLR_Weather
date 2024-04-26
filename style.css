@@ -12,20 +12,13 @@ h1{
     background-color: #4a9eff;
     font-size: 1.75rem;
     text-align: center;
-    padding: 15px 0;
+    padding: 18px 0;
     color: #ffffff;
-}
-h2{
-    background-color: #a9d1ff;
-    font-size: 1.00rem;
-    text-align: center;
-    padding: 10px 0;
-    color: #000000;
 }
 .container {
     display: flex;
     gap: 35px;
-    padding: 30px
+    padding: 30px;
 }
 .location-input {
     width: 500px;
@@ -99,8 +92,12 @@ h2{
     font-weight: 700;
     font-size: 1.7rem;
 }
-  .weather-data h6 {
+.weather-data h6 {
     margin-top: 12px;
     font-size: 1rem;
     font-weight: 500;
+}
+.forcast-weather .weather-cards .card::before {
+    display: flex;
+    gap: 30px;
 }
