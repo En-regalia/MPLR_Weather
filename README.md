@@ -15,9 +15,9 @@ The Weather Application is designed to fetch weather data from a reliable API pr
 
 ## Technologies Used
 
-- **Frontend:** TBC
-- **Backend:** TBC
-- **API:** TBC
+- **Frontend:** HTML, CSS
+- **Backend:** Javascript
+- **API:** OpenWeather
 - **Deployment:** TBC
 
 ## Demo
