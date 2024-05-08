@@ -15,8 +15,8 @@ The Weather Application is designed to fetch weather data from a reliable API pr
 
 ## Technologies Used
 
-- **Frontend:** HTML, CSS
-- **Backend:** Javascript
+- **Frontend:** HTML, CSS, Javascript
+- **Backend:** 
 - **API:** OpenWeather
 - **Deployment:** TBC
 
