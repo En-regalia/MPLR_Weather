@@ -9,23 +9,23 @@
         <meta name="description" content="This is a weather application based on the location of your choice">
         <script src="script.js" defer></script>
         <!attempt to add in favicons for functionality. In progress>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicons\apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicons\favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicons\favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-        <h1><img src="apple-touch-icon.png" alt="MPLR logo"></h1>
+        <h1><img src="Favicons\apple-touch-icon.png" alt="MPLR logo"></h1>
         <div class="container">
             <div class="location-input">
                 <h2>Please Enter a City</h2>
                 <input class="city-input" type="text" id="userInput" placeholder="e.g., Stockholm, London, New York">
-                <button class="search-btn" onclick="updateForcast()">Search</button>
+                <button class="search-btn">Search</button>
                 <div class="separator"></div>
-                <button class="location-btn" onclick="updateForcast()">Use Current Location</button>
+                <button class="location-btn">Use Current Location</button>
             </div>
         <div class="weather-data">
             <div class="current-weather">
@@ -36,45 +36,39 @@
                     <h6>Humidity: 33%</h6>
                 </div>
                 <!line remider to complete and add in weather icon line>
-                <!32% chance of rain>
             </div>
             <div class="forecast-weather">
                 <h3 id="forcastHeading">Your 5 day forecast</h3>
                 <ul class="weather-cards">
                     <li class="card">
-                        <h3>02/01/91</h3>
-                        <h6>Temp: 15c</h6>
-                        <h6>Wind: 1.00 M/S</h6>
-                        <h6>Humidity: 50%</h6>
-                        <h6>60% chance of rain</H6>
+                        <h3>(___)</h3>
+                        <h6>Temp: __°C</h6>
+                        <h6>Wind: ____ M/S</h6>
+                        <h6>Humidity: __%</h6>
                     </li>
                     <li class="card">
-                        <h3>03/01/91</h3>
-                        <h6>Temp: 15c</h6>
-                        <h6>Wind: 1.00 M/S</h6>
-                        <h6>Humidity: 50%</h6>
-                        <h6>60% chance of rain</H6>
+                        <h3>(___)</h3>
+                        <h6>Temp: __°C</h6>
+                        <h6>Wind: ____ M/S</h6>
+                        <h6>Humidity: __%</h6>
                     </li>
                     <li class="card">
-                        <h3>04/01/91</h3>
-                        <h6>Temp: 15c</h6>
-                        <h6>Wind: 1.00 M/S</h6>
-                        <h6>Humidity: 50%</h6>
-                        <h6>60% chance of rain</H6>
+                        <h3>(___)</h3>
+                        <h6>Temp: __°C</h6>
+                        <h6>Wind: ____ M/S</h6>
+                        <h6>Humidity: __%</h6>
                     </li>
                     <li class="card">
-                        <h3>04/01/91</h3>
-                        <h6>Temp: 15c</h6>
-                        <h6>Wind: 1.00 M/S</h6>
-                        <h6>Humidity: 50%</h6>
-                        <h6>60% chance of rain</H6>
+                        <h3>(___)</h3>
+                        <h6>Temp: __°C</h6>
+                        <h6>Wind: ____ M/S</h6>
+                        <h6>Humidity: __%</h6>
                     </li>
                     <li class="card">
-                        <h3>04/01/91</h3>
-                        <h6>Temp: 15c</h6>
-                        <h6>Wind: 1.00 M/S</h6>
-                        <h6>Humidity: 50%</h6>
-                        <h6>60% chance of rain</H6>
+                        <h3>(___)</h3>
+                        <h6>Temp: __°C</h6>
+                        <h6>Wind: ____ M/S</h6>
+                        <h6>Humidity: __%</h6>
                     </li>
                 </ul>
             </div>
