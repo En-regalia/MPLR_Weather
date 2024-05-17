@@ -20,6 +20,17 @@ The Weather Application is designed to fetch weather data from a reliable API pr
 - **API:** OpenWeather
 - **Deployment:** TBC
 
+## User Stories
+
+As a user
+I need to be able to enter a custom location
+So that I can view the weather in that location
+
+As a user
+I need to be able to able to use my current locaiton
+So that So that I can view the weather where I am
+
+
 ## Demo
 
 _Not in place_
