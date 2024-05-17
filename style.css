@@ -94,8 +94,15 @@ h2{
     border-radius: 6px;
     padding: 20px 70px 20px 20px;
     display: flex;
+    min-width: 200px;
     justify-content: space-between;
     margin: 20px;
+}
+.weather-data .current-weather h3 {
+    margin-top: 3px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 .weather-data .forecast-weather {
     color: #000000;
@@ -104,9 +111,13 @@ h2{
 }
 .weather-cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 .weather-cards .card{
+    flex: 1 6 200px;
+    min-width: 200px;
+    max-width: 200px;
     list-style: none;
     color: #ffffff;
     background: #2d455f;
@@ -116,12 +127,13 @@ h2{
 }
 .weather-cards .card img {
     max-width: 70px;
+    min-width: 60px;
     margin: 5px 0 -12px 0;
 }
 .weather-data h3 {
     margin-top: 3px;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 .weather-data h6 {
