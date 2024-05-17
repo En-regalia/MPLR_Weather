@@ -1,7 +1,7 @@
 
 const searchButton = document.querySelector('.search-btn');
 const cityInput = document.querySelector('.city-input');
-const locationBUtton = document.querySelector('.location-btn');
+const locationButton = document.querySelector('.location-btn');
 const weatherCardsDiv = document.querySelector('.weather-cards');
 const currentCardsDiv = document.querySelector('.current-weather')
 
@@ -14,7 +14,6 @@ function getCityCoordinates() {
     const API_url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${api_key}`;
     
     fetch(API_url).then(res => res.json()).then(data => {
-
         
         const {name, lat, lon } = data[0]
         getWeatherdetails(name, lat, lon)
@@ -22,7 +21,30 @@ function getCityCoordinates() {
     }).catch(() => {
         alert('Error1: Error fetching locaiton cordinates')
     })
+}
 
+const getUserCoordinates = () => {
+    navigator.geolocation.getCurrentPosition(
+        position => {
+            
+            const {latitude, longitude} = position.coords
+            
+            const REVERSE_API_url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${api_key}`
+            fetch(REVERSE_API_url).then(res => res.json()).then(data =>{
+                
+                    const {name} = data[0]
+                    console.log(name)
+                    getWeatherdetails(name, latitude, longitude)
+            }).catch(()=> {
+                alert('An error occored when fetching the city name')
+            });
+        },
+        error => {
+            if(error.code === error.PERMISSION_DENIED){
+                alert('Location request denied. Please reset location permitions and grant acess to location');
+            }
+        }
+    );
 }
 
 const getWeatherdetails = (cityName, lat, lon) => {
@@ -55,6 +77,7 @@ const getWeatherdetails = (cityName, lat, lon) => {
         })
         .catch(() => {
             console.error('Error2');
+            console.log(error)
             alert('Error2: Error fetching location data');
         });
 };
@@ -67,7 +90,7 @@ const createWeatherCard = (name, weatherItem, index) => {
                     <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                     <h6>Humidity: ${weatherItem.main.humidity}% </h6>
                 </div>
-                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather icon">`;
+                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="Weather icon">`;
     } else {
         return `<li class="card">
                     <h3>(${weatherItem.dt_txt.split(" ")[0]})</h3>
@@ -77,8 +100,8 @@ const createWeatherCard = (name, weatherItem, index) => {
                     <h6>Humidity: ${weatherItem.main.humidity}% </h6>
                 </li>`;
     }
-    
-
 }
 
+
 searchButton.addEventListener("click", getCityCoordinates);
+locationButton.addEventListener("click", getUserCoordinates);
