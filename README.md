@@ -22,13 +22,14 @@ The Weather Application is designed to fetch weather data from a reliable API pr
 
 ## User Stories
 
-As a user
-I need to be able to enter a custom location
-So that I can view the weather in that location
-
-As a user
-I need to be able to able to use my current locaiton
-So that So that I can view the weather where I am
+1. Story 1
+- `As a user`
+- `I need to be able to enter a custom location`
+- `So that I can view the weather in that location`
+2. Story 2
+- `As a user`
+- `I need to be able to able to use my current locaiton`
+- `So that So that I can view the weather where I am`
 
 
 ## Demo
