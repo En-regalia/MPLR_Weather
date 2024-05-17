@@ -70,9 +70,11 @@ const getWeatherdetails = (cityName, lat, lon) => {
 };
 
 const createWeatherCard = (name, weatherItem, index) => {
+    console.log(weatherItem)
     if(index === 0 ) {
         return `<div class="details">
                     <h3> ${name} (${weatherItem.dt_txt.split(" ")[0]})</h3>
+                    <h6><img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="Weather icon"></h6>
                     <h6>Temperature: ${weatherItem.main.temp}°C</h6>
                     <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                     <h6>Humidity: ${weatherItem.main.humidity}% </h6>
@@ -80,6 +82,7 @@ const createWeatherCard = (name, weatherItem, index) => {
     } else {
         return `<li class="card">
                     <h3>(${weatherItem.dt_txt.split(" ")[0]})</h3>
+                    <h6><img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="Weather icon"></h6>
                     <h6>Temp: ${weatherItem.main.temp}°C</h6>
                     <h6>Wind: ${weatherItem.wind.speed} M/S</h6>
                     <h6>Humidity: ${weatherItem.main.humidity}% </h6>

@@ -28,7 +28,7 @@ I need to be able to enter a custom location
 So that I can view the weather in that location
 
 As a user
-I need to be able to able to use my current locaiton
+I need to be able to use my current locaiton 
 So that So that I can view the weather where I am
 ```
 
