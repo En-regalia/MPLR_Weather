@@ -92,7 +92,7 @@ h2{
     color: #ffffff;
     background: #4a9eff;
     border-radius: 6px;
-    padding: 20px 70px 20px 20px;
+    padding: 20px 20px 20px 20px;
     display: flex;
     min-width: 200px;
     justify-content: space-between;
@@ -103,6 +103,13 @@ h2{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
+    flex: 1;
+}
+.weather-data .current-weather img {
+    margin-left: 20px;
+    height: 150px;
+    width: 150px;
+
 }
 .weather-data .forecast-weather {
     color: #000000;
