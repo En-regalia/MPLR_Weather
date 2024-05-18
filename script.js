@@ -5,7 +5,7 @@ const locationButton = document.querySelector('.location-btn');
 const weatherCardsDiv = document.querySelector('.weather-cards');
 const currentCardsDiv = document.querySelector('.current-weather')
 
-const api_key = '3aee46ab3ed5e73d34dde30783710867' //Enter your API key for OpenWeatherMap in the .env file
+const api_key = 'API_Key' //Enter your API key for OpenWeatherMap in the .env file
 
 
 function getCityCoordinates() {
@@ -39,7 +39,7 @@ const getUserCoordinates = () => {
                 alert('An error occored when fetching the city name')
             });
         },
-        error => {
+        error => { 
             if(error.code === error.PERMISSION_DENIED){
                 alert('Location request denied. Please reset location permitions and grant acess to location');
             }
