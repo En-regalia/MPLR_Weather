@@ -32,6 +32,17 @@ I need to be able to use my current locaiton
 So that So that I can view the weather where I am
 ```
 
+### Acceptance criteria
+```
+-Given- the user is viewing the website main page
+-When- the user enters a location & presses the 'search' button
+-Then- the weather data for the location entered sould display on the weather cards
+
+-Give- the user is viewing the website main page
+-When- the user presses the 'Use current location' button
+-then- the weather data for the users current location should display on the weather card.
+
+```
 ## Demo
 
 _Not in place_
