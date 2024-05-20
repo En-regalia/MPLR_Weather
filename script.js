@@ -5,7 +5,9 @@ const locationButton = document.querySelector('.location-btn');
 const weatherCardsDiv = document.querySelector('.weather-cards');
 const currentCardsDiv = document.querySelector('.current-weather')
 
-const api_key = 'API_Key' //Enter your API key for OpenWeatherMap in the .env file
+require('dotenv').config();
+
+const api_key = process.env.Weather_API_Key; //Enter your API key for OpenWeatherMap in the local .env file. 
 
 
 function getCityCoordinates() {

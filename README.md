@@ -20,6 +20,13 @@ The Weather Application is designed to fetch weather data from a reliable API pr
 - **API:** OpenWeather
 - **Deployment:** TBC
 
+### OpenWeather API
+
+- Please also note that dotenv module will need to be installed prior to use of this aplication.
+- OpenWeather API key should be located in a local .env file. Defined as const ```Weather_API_Key```
+- Details for the API used are [here for the 5day forcast](https://openweathermap.org/forecast5) and [here for the reverse geolocation](https://openweathermap.org/api/geocoding-api#:~:text=Reverse%20geocoding%20allows%20to%20get,see%20in%20the%20API%20response).
+- individual API key can be generated [here](https://home.openweathermap.org/api_keys)
+
 ## User Stories
 
 ```
