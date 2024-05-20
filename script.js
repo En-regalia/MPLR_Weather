@@ -15,7 +15,7 @@ function getCityCoordinates() {
     
     fetch(API_url).then(res => res.json()).then(data => {
         
-        const {name, lat, lon } = data[0]
+        const {name, lat, lon } = data[0] // Defines the variables from the data returned from the city cordinates API.
         getWeatherdetails(name, lat, lon)
  
     }).catch(() => {
@@ -27,13 +27,13 @@ const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition(
         position => {
             
-            const {latitude, longitude} = position.coords
+            const {latitude, longitude} = position.coords // defines variables from brouser posstion data.
             
             const REVERSE_API_url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${api_key}`
             fetch(REVERSE_API_url).then(res => res.json()).then(data =>{
                 
-                    const {name} = data[0]
-                    console.log(name)
+                    const {name} = data[0] // Name recived from the reverse Geolocation API.
+                    
                     getWeatherdetails(name, latitude, longitude)
             }).catch(()=> {
                 alert('An error occored when fetching the city name')
@@ -59,15 +59,15 @@ const getWeatherdetails = (cityName, lat, lon) => {
                 const forecastDate = new Date(forecast.dt_txt).getDate();
                 if (!ForcastDaysList.includes(forecastDate)) {
                     return ForcastDaysList.push(forecastDate);
-                }
+                }// Function filters the forcast data reunred from API from a 5 day 3 hour forcast to a daily forcast.
             });
             
-            //resets cityInput value and remove exsisting weather cards
+            //resets cityInput value and removes exsisting weather cards
             cityInput.value = "";
             currentCardsDiv.innerHTML = "";
             weatherCardsDiv.innerHTML = "";
             
-            fiveDaysForcast.forEach((weatherItem, index) => {
+            fiveDaysForcast.forEach((weatherItem, index) => { // Creates weather cards. Diferatiating between the main day card and the 5 day forcast cards.
                if(index === 0) {
                     currentCardsDiv.insertAdjacentHTML("beforeend", createWeatherCard(cityName, weatherItem, index))
                } else {
@@ -82,7 +82,7 @@ const getWeatherdetails = (cityName, lat, lon) => {
         });
 };
 
-const createWeatherCard = (name, weatherItem, index) => {
+const createWeatherCard = (name, weatherItem, index) => { //confirms the data included on the Weahter cards. 3
     if(index === 0 ) {
         return `<div class="details">
                     <h3> ${name} (${weatherItem.dt_txt.split(" ")[0]})</h3>
